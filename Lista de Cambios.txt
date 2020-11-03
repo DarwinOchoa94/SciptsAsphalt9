@@ -1,0 +1,2 @@
++Añadida Funcion para abrir sobres
++Funcion de esperar 4 horas por sobre

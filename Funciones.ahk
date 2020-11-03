@@ -20,11 +20,22 @@ TransformarCoordenadas(WinTitle, ByRef X, ByRef Y)
     Return
 }
 
-VerificarColor()
+AbrirSobre()
 {
-    
-    
+	Sleep, 2000
+	PixelSearch PixelX, PixelY, 772, 459, 772, 459, 0xFFFFFF, 0, Fast
+	if ErrorLevel
+	{
+		MsgBox, Siguiente NO Encontrado... Buscando
+		AbrirSobre()
+	}
+	else
+	{
+		MouseClick, Left, %PixelX%, %PixelY%
+		Sleep, 2000
+	}	
 }
+
 
 
 
